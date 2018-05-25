@@ -1,4 +1,4 @@
-# Personal-Assistant
+# Personal Assistant Using Google Assistant and Google Image Vision
 
 “Personal Assistant “the word itself means assistant working exclusively for one particular person. The major purpose of any automation system or artificial system is to reduce human labour, effort, time and errors due to his/her intelligence. The major goal of this project is to design and implement an Integrated Virtual Personal Assistant using IOT, which gives the ability to perform task or service for an individual. These tasks or may be services are based on user input, on location and also the ability to access information from variety of online sources.
 
