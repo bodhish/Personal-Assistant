@@ -30,31 +30,54 @@ We use Google Cloud Vision on the Raspberry Pi to take a picture with the Raspbe
 
 Now we want to get a JSON key to put on our Raspberry Pi.  This JSON key will handle all the authentication to use our Google Cloud Account.  Instead of a password, we can use the file to authenticate our account on the Raspberry Pi. Create a service account key and autherise the account and create a role.  Give it full access, so select “Project” and “Owner” to give the Pi Full access to all resources.
 Next, upgrade Pip.  Pip is a package manager for python language installations.
+
 Note, you should have Pip installed (it comes installed on Raspbian for Robots); if you don’t upgrade, you will get an error on installation!
-  	`sudo pip install --upgrade pip`       				 			
- 	`sudo apt-get install libjpeg8-dev` 				 							
+  	
+	`sudo pip install --upgrade pip`       				 			
+	
+	`sudo apt-get install libjpeg8-dev` 				 							
+
 Next, install Google API Python Client.   Again in the command line, run:
- 	`sudo pip install --upgrade google-api-python-client`		 			  
+ 	
+	 `sudo pip install --upgrade google-api-python-client`		 			  
+
 Next, install Python Imaging Library.  Again in the command line, run:
- 	`sudo pip install --upgrade Pillow`  						
+ 	
+	 `sudo pip install --upgrade Pillow`  						
+
 Install Python Picamera:
+	
 	`sudo apt-get install python-picamera`						 	
+
 Turn on Super User.  In the command line, type the command “su”:
- 	`su` 										
+ 	
+	 `su` 										
+
 You’ll be prompted for your password; this is the password you used to login to your Raspberry Pi. In the home directory, we will make the JSON file available to any application we’re running.  Run the command:
- 	`export GOOGLE_APPLICATION_CREDENTIALS=filename.json`	
+ 	
+	 `export GOOGLE_APPLICATION_CREDENTIALS=filename.json`	
+
 Be sure to substitute your JSON filename in this command with the name of the file you have on your Raspberry Pi.
 
 
 First, we’ll try to get the Raspberry Pi to detect the Raspberry Pi Logo.  We’ll use the big Raspberry Pi label on the Raspberry Pi Box.  Set the Pi box about 1 ft from the camera.  We’ll be propping up the camera with a Raspberry Pi Robot, the GoPiGo.  It holds the camera in place with the acrylic body, and we will use it later for some fun projects!
+
 You might want to take a test picture to make sure the label is visible.  In the command line, run
- 	`raspistill -o cam.jpg` 								
+ 	
+	 `raspistill -o cam.jpg` 								
+
 We’ll go into super user mode on the Pi.
+
  	`sudo su`									
+
 We’ll make our JSON credentials available.  In the command line, type:
+
  	`export GOOGLE_APPLICATION_CREDENTIALS=filename.json`	
+
 And now, in the example directory, run:
+
  	`python camera-vision-logo.py`						
+
 You should get “Raspberry Pi” back, your setup is complete.
 
 7.3	Google Assistant Library
