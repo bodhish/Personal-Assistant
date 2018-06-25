@@ -25,35 +25,38 @@ Once the files have been copied over, insert the micro SD Card into your Raspber
 Click Yes at the warning dialog, and then sit back and relax. It will take a while, but Raspbian will install. Boot the Raspbeery Pi to use the Raspbian OS
 
 
-7.2 Google Image Vision
+### 2.2 Google Image Vision
 We use Google Cloud Vision on the Raspberry Pi to take a picture with the Raspberry Pi Camera and classify it with the Google Cloud Vision API. The first step is to set up a Google Cloud Account. You can create an account here with either your Google or Gmail login. Google offers the first 60 days for free. Create a new project with the required name. You will need to enable billing for your account (you won’t be charged).  Go to the Cloud Platform Console. Select the project “ProjectName” and click the hamburger in the upper left hand corner of the page, Then enable the API.  
+
 Now we want to get a JSON key to put on our Raspberry Pi.  This JSON key will handle all the authentication to use our Google Cloud Account.  Instead of a password, we can use the file to authenticate our account on the Raspberry Pi. Create a service account key and autherise the account and create a role.  Give it full access, so select “Project” and “Owner” to give the Pi Full access to all resources.
-Next, upgrade Pip.  Pip is a package manager for python language installations.  Note, you should have Pip installed (it comes installed on Raspbian for Robots); if you don’t upgrade, you will get an error on installation!
-  	sudo pip install --upgrade pip       				 			
- 	sudo apt-get install libjpeg8-dev 				 							
+Next, upgrade Pip.  Pip is a package manager for python language installations.
+Note, you should have Pip installed (it comes installed on Raspbian for Robots); if you don’t upgrade, you will get an error on installation!
+  	`sudo pip install --upgrade pip`       				 			
+ 	`sudo apt-get install libjpeg8-dev` 				 							
 Next, install Google API Python Client.   Again in the command line, run:
- 	sudo pip install --upgrade google-api-python-client		 			  
+ 	`sudo pip install --upgrade google-api-python-client`		 			  
 Next, install Python Imaging Library.  Again in the command line, run:
- 	sudo pip install --upgrade Pillow  						
+ 	`sudo pip install --upgrade Pillow`  						
 Install Python Picamera:
-	sudo apt-get install python-picamera						 	
+	`sudo apt-get install python-picamera`						 	
 Turn on Super User.  In the command line, type the command “su”:
- 	su 										
+ 	`su` 										
 You’ll be prompted for your password; this is the password you used to login to your Raspberry Pi. In the home directory, we will make the JSON file available to any application we’re running.  Run the command:
- 	export GOOGLE_APPLICATION_CREDENTIALS=filename.json	
+ 	`export GOOGLE_APPLICATION_CREDENTIALS=filename.json`	
 Be sure to substitute your JSON filename in this command with the name of the file you have on your Raspberry Pi.
 
 
 First, we’ll try to get the Raspberry Pi to detect the Raspberry Pi Logo.  We’ll use the big Raspberry Pi label on the Raspberry Pi Box.  Set the Pi box about 1 ft from the camera.  We’ll be propping up the camera with a Raspberry Pi Robot, the GoPiGo.  It holds the camera in place with the acrylic body, and we will use it later for some fun projects!
 You might want to take a test picture to make sure the label is visible.  In the command line, run
- 	raspistill -o cam.jpg 								
+ 	`raspistill -o cam.jpg` 								
 We’ll go into super user mode on the Pi.
- 	sudo su									
+ 	`sudo su`									
 We’ll make our JSON credentials available.  In the command line, type:
- 	export GOOGLE_APPLICATION_CREDENTIALS=filename.json	
+ 	`export GOOGLE_APPLICATION_CREDENTIALS=filename.json`	
 And now, in the example directory, run:
- 	python camera-vision-logo.py						
+ 	`python camera-vision-logo.py`						
 You should get “Raspberry Pi” back, your setup is complete.
+
 7.3	Google Assistant Library
 The Google Assistant Library for Python is a turnkey solution for anyone who wants to quickly integrate the Assistant into a prototype device. The library is written in Python and is supported on popular prototyping devices such as the Raspberry Pi 3.
 A Google Cloud Platform project, managed by the Actions Console, gives your device access to the Google Assistant API. The project tracks quota usage and gives you valuable metrics for the requests made from your device. To enable access to the Google Assistant API, do the following: 
