@@ -80,39 +80,66 @@ And now, in the example directory, run:
 
 You should get “Raspberry Pi” back, your setup is complete.
 
-7.3	Google Assistant Library
+### 2.3	Google Assistant Library
+
 The Google Assistant Library for Python is a turnkey solution for anyone who wants to quickly integrate the Assistant into a prototype device. The library is written in Python and is supported on popular prototyping devices such as the Raspberry Pi 3.
+
 A Google Cloud Platform project, managed by the Actions Console, gives your device access to the Google Assistant API. The project tracks quota usage and gives you valuable metrics for the requests made from your device. To enable access to the Google Assistant API, do the following: 
+
 1.	Open the Actions Console.
+
 2.	Click on Add/import project.
 
 3.	To create a new project, type a name in the Project name box and click CREATE PROJECT.
+
 4.	Click the Device registration box.
+
 5.	Enable the Google Assistant API on the project you selected (see the Terms of Service). You need to do this in the Cloud Platform Console.
 In order for the Google Assistant to respond to commands appropriate to your device and the given context, the Assistant needs information about your particular device. You provide this information, which includes fields like device type and manufacturer, as a device model. You can think of this model as a general class of device - like a light, speaker, or toy robot.
+
 This information is then accessible to the Google Assistant and is associated with your Actions Console project. No other projects have access to your model and device information. After regestration create model and regester the device, download the credentials.json file and store it in the Raspberry Pi
+
 Make sure this file is located in /home/pi. Use a Python virtual environment to isolate the SDK and its dependencies from the system Python packages.
+
 Install Python 3 by entering the following commands
- 	sudo apt-get update								 
- 	sudo apt-get install python3-dev python3-venv				
- 	python3 -m venv env 								
- 	env/bin/python -m pip install --upgrade pip setuptools wheel 		
+ 	`sudo apt-get update`
+
+ 	`sudo apt-get install python3-dev python3-venv`				
+ 	
+	`python3 -m venv env`
+
+ 	`env/bin/python -m pip install --upgrade pip setuptools wheel`
+
 Acivate the python virtual environment by entering the foolwing command
- 	source env/bin/activate 							
+ 	
+	 `source env/bin/activate` 							
+
 Download the the Google Assistant SDK package that contains all the code required to get the Google Assistant running on the device.
 Install the package's system dependencies:
- 	sudo apt-get install portaudio19-dev libffi-dev libssl-dev libmpg123-dev	
- 	python -m pip install --upgrade google-assistant-library			
- 	python -m pip install --upgrade google-assistant-sdk[samples] 		
+
+ 	`sudo apt-get install portaudio19-dev libffi-dev libssl-dev libmpg123-dev`
+
+ 	`python -m pip install --upgrade google-assistant-library`
+
+ 	`python -m pip install --upgrade google-assistant-sdk[samples]` 
+
 
 Install or update the authorization tool: 	
- 	python -m pip install --upgrade google-auth-oauthlib[tool] 				
+ 	
+	 `python -m pip install --upgrade google-auth-oauthlib[tool]`
+
 Generate credentials to be able to run the sample code and tools. Reference the JSON file you downloaded in a previous step; you may need to copy it the device. Do not rename this file.
- 	google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype\--scope https://www.googleapis.com/auth/gcm\--save --headless --client-secrets /path/to/credentials.json		
+ 	
+	 `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype\--scope https://www.googleapis.com/auth/gcm\--save --headless --client-secrets /path/to/credentials.json`
+
 Copy the URL and paste it into a browser (this can be done on any machine). The page will ask you to sign in to your Google account. Sign into the Google account that created the developer project in the previous step. After you approve the permission request from the API, a code will appear in your browser, such as "4/XXXX". Copy and paste this code into the terminal to activate. 
+
 When the instaltion process is over you can run the code by entering the following command
- googlesamples-assistant-hotword --project_id my-dev-project --device_model_id my-model    
+
+ `googlesamples-assistant-hotword --project_id my-dev-project --device_model_id my-model`    
+
 where “my-dev-project” is the project id you have specifed while regestring and “my-model” is the name of your model.
+
 7.4 	Flask
 Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed. The latest stable version of Flask is 1.0 as of April 2018.[19] Flask is called a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more regularly than the core Flask program.[20]
 
