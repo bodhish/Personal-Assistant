@@ -140,7 +140,7 @@ When the instaltion process is over you can run the code by entering the followi
 
 where “my-dev-project” is the project id you have specifed while regestring and “my-model” is the name of your model.
 
-### 2.4 	Flask
+### 2.4 Flask
 
 Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed. The latest stable version of Flask is 1.0 as of April 2018. Flask is called a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more regularly than the core Flask program.
 
@@ -148,7 +148,7 @@ For for system-wide installation run  pip with root privileges:
 
  	`sudo pip install Flask`								
 
-### 2.5 	Ngrok
+### 2.5 Ngrok
 
 ngrok creates a tunnel from the public internet to a port on your local machine. You can give this URL to anyone to allow them to try out a web site you're developing without doing any deployment. It captures all traffic through the tunnel. It displays information about the HTTP traffic for your inspection. Raw request/response bytes, parsed headers and form data, JSON/XML syntax checking and more are included. It can also replay requests.
 
@@ -160,13 +160,15 @@ Download the single binary with zero run-time dependencies, unzip ngrok from a t
 
 Running this command will add your account's authtoken to your ngrok.yml file. This will give you more features and all open tunnels will be listed here in the dashboard.
 
-` 	./ngrok authtoken 2sMXEyU67vG9DTBNepgFp_5o5GaTrNhuLWHuesEFewX  
-`
+` 	./ngrok authtoken 2sMXEyU67vG9DTBNepgFp_5o5GaTrNhuLWHuesEFewX  `
+
 To start a HTTP tunnel on port 80
 
 ` 	./ngrok http 80										`
 
-7.6 	IFFT
+### 2.6 IFFT
 If This Then That, also known as IFTTT, is a free web-based service to create chains of simple conditional statements, called applets. An applet is triggered by changes that occur within other web services such as Gmail, Facebook, Telegram, Instagram, or Pinterest. For example, an applet may send an e-mail message if the user tweets using a hashtag, or copy a photo on Facebook to a user's archive if someone tags a user in a photo.
 
 In addition to the web-based application, the service runs on iOS and Android. In February 2015, IFTTT renamed their original application to IF, and released a new suite of apps called Do which lets users create shortcut applications and actions. As of 2015, IFTTT users created about 20 million recipes each day. All of the functionalities of the Do suite of apps have since been integrated into a redesigned IFTTT app.
+
+Know More Contact : bodhish@gmail.com
