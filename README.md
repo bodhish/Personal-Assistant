@@ -140,7 +140,7 @@ When the instaltion process is over you can run the code by entering the followi
 
 where “my-dev-project” is the project id you have specifed while regestring and “my-model” is the name of your model.
 
-###2.4 	Flask
+### 2.4 	Flask
 
 Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed. The latest stable version of Flask is 1.0 as of April 2018. Flask is called a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more regularly than the core Flask program.
 
@@ -148,15 +148,24 @@ For for system-wide installation run  pip with root privileges:
 
  	`sudo pip install Flask`								
 
-7.5 	Ngrok
+### 2.5 	Ngrok
+
 ngrok creates a tunnel from the public internet to a port on your local machine. You can give this URL to anyone to allow them to try out a web site you're developing without doing any deployment. It captures all traffic through the tunnel. It displays information about the HTTP traffic for your inspection. Raw request/response bytes, parsed headers and form data, JSON/XML syntax checking and more are included. It can also replay requests.
+
 By default, ngrok will use ngrok.com as a third-party relay. This service is provided at no-cost and without registration but it is possible to get additional features by signing up in the service (which is pay-as-you-want kind). However, it is possible to setup and use its own server. This package installs the client part of ngrok. It can be used directly with ngrok.com service or with your own server if you install the ngrok-server package.
+
 Download the single binary with zero run-time dependencies, unzip ngrok from a terminal with the following command. 
- 	unzip /path/to/ngrok.zip 								
+
+` 	unzip /path/to/ngrok.zip 								`
+
 Running this command will add your account's authtoken to your ngrok.yml file. This will give you more features and all open tunnels will be listed here in the dashboard.
- 	./ngrok authtoken 2sMXEyU67vG9DTBNepgFp_5o5GaTrNhuLWHuesEFewX  
+
+` 	./ngrok authtoken 2sMXEyU67vG9DTBNepgFp_5o5GaTrNhuLWHuesEFewX  
+`
 To start a HTTP tunnel on port 80
- 	./ngrok http 80										
+
+` 	./ngrok http 80										`
+
 7.6 	IFFT
 If This Then That, also known as IFTTT, is a free web-based service to create chains of simple conditional statements, called applets. An applet is triggered by changes that occur within other web services such as Gmail, Facebook, Telegram, Instagram, or Pinterest. For example, an applet may send an e-mail message if the user tweets using a hashtag, or copy a photo on Facebook to a user's archive if someone tags a user in a photo.
 
