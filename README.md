@@ -144,6 +144,8 @@ When the instaltion process is over you can run the code by entering the followi
 
 where “my-dev-project” is the project id you have specifed while regestring and “my-model” is the name of your model.
 
+More Details: https://developers.google.com/assistant/sdk/guides/library/python/
+
 ### 2.4 Flask
 
 Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed. The latest stable version of Flask is 1.0 as of April 2018. Flask is called a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more regularly than the core Flask program.
