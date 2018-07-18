@@ -177,6 +177,6 @@ If This Then That, also known as IFTTT, is a free web-based service to create ch
 
 In addition to the web-based application, the service runs on iOS and Android. In February 2015, IFTTT renamed their original application to IF, and released a new suite of apps called Do which lets users create shortcut applications and actions. As of 2015, IFTTT users created about 20 million recipes each day. All of the functionalities of the Do suite of apps have since been integrated into a redesigned IFTTT app.
 
-Know More Contact : `bodhish@gmail.com`
+Know More Contact : `bodhish@gmail.com` / 8547673209 (whatsapp)
 
 Feel free to update the doc
